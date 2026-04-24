@@ -172,6 +172,18 @@ if(mensagem.startsWith("valor = "))
   const char * vetorCaracteres = novaFrase.c_str();
   Serial.println(vetorCaracteres);
 
+  //!------------------------------------------------------------------------
+
+  char tamanho[50] = "O professor é legal";
+  int anoAtual = 2026;
+
+  Serial.printf("Aluno: %s Ano Atual: %d\n\r", nomeCompleto.c_str(), anoAtual);
+
+  //* Guarda o formato desejado respeitando o tamanho estipulado.
+  snprintf(tamanho, sizeof(tamanho), "O aluno %s é muito legal\n\rAno atual: %d\n\r", nomeCompleto.c_str(), anoAtual);
+
+  Serial.println(tamanho);
+
   // Serial.println(primeiroNomeExplicito);
   // Serial.println(primeiroNomeImplicito);
   // Serial.println(nomeCompleto);
